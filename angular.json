@@ -45,6 +45,7 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
+              "baseHref": "https://softmks.github.io/ng-mschart/",
               "budgets": [
                 {
                   "type": "initial",
