@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ng-mschart": [
+        "dist/ng-mschart"
+      ],
+      "ng-mschart/*": [
+        "dist/ng-mschart/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

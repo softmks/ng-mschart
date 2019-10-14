@@ -120,6 +120,41 @@
           }
         }
       }
+    },
+    "ng-mscharts": {
+      "projectType": "library",
+      "root": "projects/ng-mscharts",
+      "sourceRoot": "projects/ng-mscharts/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ng-mscharts/tsconfig.lib.json",
+            "project": "projects/ng-mscharts/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-mscharts/src/test.ts",
+            "tsConfig": "projects/ng-mscharts/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-mscharts/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ng-mscharts/tsconfig.lib.json",
+              "projects/ng-mscharts/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "mscharts-angular"
 }
