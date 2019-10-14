@@ -1,9 +1,29 @@
 {
   "name": "ng-mschart",
   "version": "0.0.1",
+  "description": "An angular implementation of mschart",
   "peerDependencies": {
     "@angular/common": "^8.2.9",
     "@angular/core": "^8.2.9",
     "mschart": "0.0.2"
-  }
+  },
+  "author": {
+    "name": "Manoj Kumar"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/softmks/ng-mschart/issues"
+  },
+  "homepage": "https://github.com/softmks/ng-mschart",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/softmks/ng-mschart.git"
+  },
+  "keywords": [
+    "angular",
+    "mschart",
+    "ng-mschart",
+    "chart",
+    "ui"
+  ]
 }
