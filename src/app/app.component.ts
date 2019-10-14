@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import {FormArray, FormControl, FormGroup} from '@angular/forms';
-import {NgMschartsComponent} from 'ng-mscharts';
+import { NgMschartComponent } from 'projects/ng-mschart/src/lib/ng-mschart.component';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +9,7 @@ import {NgMschartsComponent} from 'ng-mscharts';
 })
 export class AppComponent {
   title = 'mscharts-angular';
-  @ViewChild('chart', {static: true}) chart: NgMschartsComponent;
+  @ViewChild('chart', {static: true}) chart: NgMschartComponent;
 
   form: FormGroup;
 

@@ -121,33 +121,33 @@
         }
       }
     },
-    "ng-mscharts": {
+    "ng-mschart": {
       "projectType": "library",
-      "root": "projects/ng-mscharts",
-      "sourceRoot": "projects/ng-mscharts/src",
+      "root": "projects/ng-mschart",
+      "sourceRoot": "projects/ng-mschart/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/ng-mscharts/tsconfig.lib.json",
-            "project": "projects/ng-mscharts/ng-package.json"
+            "tsConfig": "projects/ng-mschart/tsconfig.lib.json",
+            "project": "projects/ng-mschart/ng-package.json"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ng-mscharts/src/test.ts",
-            "tsConfig": "projects/ng-mscharts/tsconfig.spec.json",
-            "karmaConfig": "projects/ng-mscharts/karma.conf.js"
+            "main": "projects/ng-mschart/src/test.ts",
+            "tsConfig": "projects/ng-mschart/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-mschart/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/ng-mscharts/tsconfig.lib.json",
-              "projects/ng-mscharts/tsconfig.spec.json"
+              "projects/ng-mschart/tsconfig.lib.json",
+              "projects/ng-mschart/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
