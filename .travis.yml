@@ -13,7 +13,7 @@ script:
   - npm run build:compodoc
 after_success:
   - git clone https://softmks:$GITHUB_TOKEN@github.com/softmks/ng-mschart-doc.git
-  - cp -r dist/documentation/* ng-mschart-doc/
+  - cp -r docs ng-mschart-doc/
   - cd ng-mschart-doc
   - git add .
   - git commit -m "build to ng-mschart-doc"
