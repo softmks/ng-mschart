@@ -8,8 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:compodoc": "compodoc -p ./tsconfig.app.json -d dist/documentation/compodoc",
-    "serve:compodoc": "compodoc -p ./tsconfig.app.json -d dist/documentation/compodoc -s"
+    "build:compodoc": "compodoc -p ./tsconfig.app.json -d dist/documentation -s",
+    "serve:compodoc": "compodoc -p ./tsconfig.app.json -d dist/documentation -s"
   },
   "private": true,
   "dependencies": {
