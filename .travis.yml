@@ -11,14 +11,6 @@ install:
 script:
   - npm run-script build
   - npm run build:compodoc
-after_success:
-    git clone https://github.com/softmks/ng-mschart-doc.git
-    cp -r dist/documentation/* ng-mschart-doc/
-    cd ng-mschart-doc
-    git add .
-    git commit -m "build to ng-mschart-doc"
-    git push -fq origin master
-    echo -e "Done with ng-mschart-doc push. "
 deploy:
      provider: pages
     skip_cleanup: true
