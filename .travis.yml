@@ -11,9 +11,15 @@ install:
 script:
   - npm run-script build
 deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN
-  local_dir: dist/mscharts-angular
-  on:
-    branch: master
+  - provider: pages
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    local_dir: dist/mscharts-angular
+    on:
+      branch: master
+  - provider: documentation
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    local_dir: dist/documentation
+    on:
+      branch: master
