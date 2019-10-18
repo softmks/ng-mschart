@@ -10,6 +10,7 @@ install:
   - npm install
 script:
   - npm run-script build
+  - ng build --prod --base-href https://softmks.github.io/ng-mschart-doc/
   - npm run build:compodoc
 after_success:
   - git clone https://softmks:$GITHUB_TOKEN@github.com/softmks/ng-mschart-doc.git
