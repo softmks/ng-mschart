@@ -1,0 +1,37 @@
+<div class="lineChartTable">
+        <div>
+            <div><B><U>Brush Line chart</U></B></div>
+        </div>   
+        <div>
+            <div style="vertical-align: top;">
+                <div id="brush_wrapper" style="border: 1px solid gray;">
+                    <div id="chart_line2">
+                        <ng-mschart #chart
+                            [title]="title"
+                            [xaxis]="xaxis2"
+                            [chart]="chartD2"
+                            [colors]="colors2" 
+                            [stroke]="stroke2"
+                            [dataLabels]="dataLabels2"
+                            [fill]="fill2"
+                            [markers]="markers2"
+                            [series]="series2"
+                            [autoUpdateSeries]="true">
+                        </ng-mschart>
+                    </div>
+                    <div id="chart_line">
+                        <ng-mschart #chart
+                            [xaxis]="xaxis1"
+                            [yaxis]="yaxis1"
+                            [chart]="chartD1"
+                            [colors]="colors1" 
+                            [fill]="fill1"
+                            [series]="series1"
+                            [autoUpdateSeries]="true">
+                        </ng-mschart>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    

@@ -8,11 +8,15 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 //import { NgMschartModule } from '../../projects/ng-mschart/src/lib/ng-mschart.module';
 import { SeriesPipe } from './series.pipe';
 import { NgMschartModule } from 'projects/ng-mschart/src/lib/ng-mschart.module';
+import { BasicComponent } from './Line/basic/basic.component';
+import { BrushComponent } from './Line/brush/brush.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SeriesPipe
+    SeriesPipe,
+    BasicComponent,
+    BrushComponent
   ],
   imports: [
     BrowserModule,

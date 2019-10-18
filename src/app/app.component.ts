@@ -1,5 +1,4 @@
 import { Component, ViewChild } from '@angular/core';
-import {FormArray, FormControl, FormGroup} from '@angular/forms';
 import { NgMschartComponent } from 'projects/ng-mschart/src/lib/ng-mschart.component';
 
 @Component({
@@ -7,65 +6,39 @@ import { NgMschartComponent } from 'projects/ng-mschart/src/lib/ng-mschart.compo
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+/**
+ * AppComponent
+ */
 export class AppComponent {
   title = 'mscharts-angular';
   @ViewChild('chart', {static: true}) chart: NgMschartComponent;
 
-  form: FormGroup;
+  show: any = {
+    line_basic: false,
+    line_brush: false
+  }
+  carot = 'fa-caret-down';
+  lineTypesDisplay: string= 'none';
 
   constructor() {
-    this.form = new FormGroup({
-      title: new FormControl('Basic Chart'),
-      type: new FormControl('line'),
-      height: new FormControl(350),
-      series: new FormArray([
-        new FormGroup({
-          name: new FormControl('Series'),
-          type: new FormControl('line'),
-          data: new FormArray([
-            new FormControl(this.getRandomArbitrary(0, 100)),
-            new FormControl(this.getRandomArbitrary(0, 100)),
-            new FormControl(this.getRandomArbitrary(0, 100)),
-            new FormControl(this.getRandomArbitrary(0, 100)),
-            new FormControl(this.getRandomArbitrary(0, 100)),
-            new FormControl(this.getRandomArbitrary(0, 100)),
-            new FormControl(this.getRandomArbitrary(0, 100))
-          ])
-        })
-      ]),
-      xaxis: new FormArray([
-        new FormControl('Jan'),
-        new FormControl('Feb'),
-        new FormControl('Mar'),
-        new FormControl('Apr'),
-        new FormControl('May'),
-        new FormControl('Jun'),
-        new FormControl('Jul')
-      ])
-    });
-  }
-
-  addValue() {
-    (<FormArray>this.form.get('series')).controls.forEach((c) => {
-      (<FormArray>c.get('data')).push(new FormControl(this.getRandomArbitrary(0, 100)));
-    });
-    (<FormArray>this.form.get('xaxis')).push(new FormControl('Jan'));
-  }
-
-  addSeries() {
-    (<FormArray>this.form.get('series')).push(new FormGroup({
-      name: new FormControl('Series'),
-      type: new FormControl('line'),
-      data: new FormArray([
-        new FormControl(this.getRandomArbitrary(0, 100)),
-        new FormControl(this.getRandomArbitrary(0, 100)),
-        new FormControl(this.getRandomArbitrary(0, 100)),
-        new FormControl(this.getRandomArbitrary(0, 100))
-      ])
-    }));
   }
 
   private getRandomArbitrary(min, max) {
     return Math.round(Math.random() * (max - min) + min);
+  }
+
+  onClick($event, from){
+    let self = this;
+    self.showDefault();
+    self.show[from] =  true;
+  }
+  showDefault(){
+    let self = this;
+    Object.keys(self.show).forEach(key => self.show[key] = false);
+  }
+  expand($event, from){
+    let self = this;
+    self.lineTypesDisplay = self.lineTypesDisplay === 'block' ? 'none' : 'block';
+    self.carot = self.carot === 'fa-caret-down' ? 'fa-caret-up' : 'fa-caret-down'
   }
 }

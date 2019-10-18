@@ -25,9 +25,6 @@ import { default as MSCharts } from 'mschart';
 @Component({
   selector: 'ng-mschart',
   template: `
-    <p>
-      ng-mschart works !
-    </p>
     <div #chart></div>
   `,
   styles: []
@@ -114,7 +111,7 @@ export class NgMschartComponent implements OnInit {
       this.chartElement.nativeElement,
       options
     );
-
+    console.log(this.chartObj);
     this.render();
   }
   public render(): Promise<void> {

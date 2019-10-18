@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import "~font-awesome/css/font-awesome.css";
+
+
+div.lineChartTable {
+    display: table;
+    width: 100%;
+}
+
+div.lineChartTable > div {
+    display: table-row;
+    width: 100%;
+    text-align: center;
+}
+div.lineChartTable > div > div {
+    display: table-cell;
+    width: 20%;
+}

@@ -1,0 +1,15 @@
+<div class="lineChartTable">
+    <div>
+        <div><B><U>Basic Line chart</U></B></div>
+    </div>   
+    <div>
+        <div id="brush_wrapper" style="border: 1px solid gray;">
+            <ng-mschart #chart [series]="series"
+                [xaxis]="xaxis"
+                [chart]="chartD"
+                [title]="title" 
+                [autoUpdateSeries]="false">
+            </ng-mschart>
+        </div>
+    </div>
+</div>
