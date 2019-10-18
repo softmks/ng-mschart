@@ -10,6 +10,7 @@ install:
   - npm install
 script:
   - npm run-script build
+  - npm run build:compodoc
 deploy:
   - provider: pages
     skip_cleanup: true
