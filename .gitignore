@@ -4,7 +4,8 @@
 *storybook*
 documentation/
 # compiled output
-/dist
+/dist/mscharts-angular
+/dist/ng-mschart
 /tmp
 /out-tsc
 # Only exists if Bazel was run
