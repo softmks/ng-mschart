@@ -18,7 +18,7 @@ after_success:
   - git add .
   - git commit -m "build to ng-mschart-doc"
   - git push -fq origin master
-  - echo -e "Done with ng-mschart-doc push"
+  - echo -e "Done with ng-mschart-doc push."
 deploy:
      provider: pages
     skip_cleanup: true
