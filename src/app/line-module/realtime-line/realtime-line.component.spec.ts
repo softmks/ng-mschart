@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BrushComponent } from './brush.component';
+import { RealtimeLineComponent } from './realtime-line.component';
 
-describe('BrushComponent', () => {
-  let component: BrushComponent;
-  let fixture: ComponentFixture<BrushComponent>;
+describe('RealtimeLineComponent', () => {
+  let component: RealtimeLineComponent;
+  let fixture: ComponentFixture<RealtimeLineComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BrushComponent ]
+      declarations: [ RealtimeLineComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BrushComponent);
+    fixture = TestBed.createComponent(RealtimeLineComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -8,22 +8,22 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 //import { NgMschartModule } from '../../projects/ng-mschart/src/lib/ng-mschart.module';
 import { SeriesPipe } from './series.pipe';
 import { NgMschartModule } from 'projects/ng-mschart/src/lib/ng-mschart.module';
-import { BasicComponent } from './Line/basic/basic.component';
-import { BrushComponent } from './Line/brush/brush.component';
+import { LineModuleModule } from './line-module/line-module.module';
+import { SparklinesModuleModule } from './sparklines-module/sparklines-module.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SeriesPipe,
-    BasicComponent,
-    BrushComponent
+    SeriesPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    NgMschartModule
+    NgMschartModule,
+    LineModuleModule,
+    SparklinesModuleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

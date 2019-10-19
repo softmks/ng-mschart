@@ -15,10 +15,13 @@ export class AppComponent {
 
   show: any = {
     line_basic: false,
-    line_brush: false
+    line_brush: false,
+    sparkline: false
   }
-  carot = 'fa-caret-down';
+  linecarot = 'fa-caret-down';
+  sparklinecarot = 'fa-caret-down';
   lineTypesDisplay: string= 'none';
+  sparklineTypesDisplay: string='none';
 
   constructor() {
   }
@@ -38,7 +41,8 @@ export class AppComponent {
   }
   expand($event, from){
     let self = this;
-    self.lineTypesDisplay = self.lineTypesDisplay === 'block' ? 'none' : 'block';
-    self.carot = self.carot === 'fa-caret-down' ? 'fa-caret-up' : 'fa-caret-down'
+    if(from === 'line') self.lineTypesDisplay = self.lineTypesDisplay === 'block' ? 'none' : 'block';
+    if(from === 'sparkline') self.sparklineTypesDisplay = self.sparklineTypesDisplay === 'block' ? 'none' : 'block';
+    self[from+'carot'] = self[from+'carot'] === 'fa-caret-down' ? 'fa-caret-up' : 'fa-caret-down'
   }
 }

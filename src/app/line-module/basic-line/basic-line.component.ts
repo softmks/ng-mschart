@@ -1,12 +1,11 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'line-basic',
-  templateUrl: './basic.component.html',
-  styleUrls: ['./basic.component.css']
+  selector: 'app-basic-line',
+  templateUrl: './basic-line.component.html',
+  styleUrls: ['./basic-line.component.css']
 })
-export class BasicComponent implements OnInit {
-  //@ViewChild('chart', {static: true}) chart: NgMschartComponent;
+export class BasicLineComponent implements OnInit {
 
   title: object;
   series: any[];
@@ -42,4 +41,5 @@ export class BasicComponent implements OnInit {
 
   ngOnInit() {
   }
+
 }

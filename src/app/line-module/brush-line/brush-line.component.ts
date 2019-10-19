@@ -1,12 +1,11 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { NgMschartComponent } from 'projects/ng-mschart/src/lib/ng-mschart.component';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'line-brush',
-  templateUrl: './brush.component.html',
-  styleUrls: ['./brush.component.css']
+  selector: 'app-brush-line',
+  templateUrl: './brush-line.component.html',
+  styleUrls: ['./brush-line.component.css']
 })
-export class BrushComponent implements OnInit {
+export class BrushLineComponent implements OnInit {
 
   //@ViewChild('chart-line2', {static: true}) chart2: NgMschartComponent;
   //@ViewChild('chart-line', {static: true}) chart: NgMschartComponent;
@@ -89,9 +88,6 @@ export class BrushComponent implements OnInit {
       data: data
     }];
   }
-
-  ngOnInit() {
-  }
   generateDayWiseTimeSeries(baseval, count, yrange) {
     var i = 0;
     var series = [];
@@ -105,4 +101,8 @@ export class BrushComponent implements OnInit {
     }
     return series;
   }
+
+  ngOnInit() {
+  }
+
 }

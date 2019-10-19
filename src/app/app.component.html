@@ -1,17 +1,24 @@
 <div class="sidebar">
   <a class="active" href="https://softmks.github.io/ng-mschart-doc/" target="_blank">Home (Doc..)</a>
   <button class="dropdown-btn" (click)="expand($event, 'line')">Line
-    <i class="fa" [ngClass]="carot"></i>
+    <i class="fa" [ngClass]="linecarot"></i>
   </button>
   <div class="dropdown-container" [ngStyle]="{'display': lineTypesDisplay}">
     <a (click)="onClick($event, 'line_basic')">Basic</a>
     <a (click)="onClick($event, 'line_brush')">Brush</a>
   </div>
+  <button class="dropdown-btn" (click)="expand($event, 'sparkline')">Sparkline
+      <i class="fa" [ngClass]="sparklinecarot"></i>
+    </button>
+    <div class="dropdown-container" [ngStyle]="{'display': sparklineTypesDisplay}">
+      <a (click)="onClick($event, 'sparkline')">Sparkline</a>
+    </div>
 </div>
 
 <!-- Page content -->
 <div class="content">
-  <line-basic *ngIf="show.line_basic"></line-basic>
-  <line-brush *ngIf="show.line_brush"></line-brush>
+  <app-basic-line *ngIf="show.line_basic"></app-basic-line>
+  <app-brush-line *ngIf="show.line_brush"></app-brush-line>
+  <app-sparklines *ngIf="show.sparkline"></app-sparklines>
 </div>
 <router-outlet></router-outlet>
